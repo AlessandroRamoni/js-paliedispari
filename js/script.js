@@ -37,8 +37,10 @@ console.log(pariDispari);
 
 if (scelta === pariDispari) {
   titolo.append("Hai vinto");
+  titolo.style.color = "green";
 } else {
   titolo.append("Hai perso");
+  titolo.style.color = "red";
 }
 
 //////// funzione numero random
