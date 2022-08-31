@@ -22,17 +22,36 @@ function reverseWord(word) {
 */
 /////////////////// PARI E DISPARI
 
-let opzione = true;
-console.log(typeof opzione);
-
-if (opzione === true) {
-  const scelta = parseInt(prompt("Inserisci un numero da 1 a 5"));
-  console.log(scelta);
-  const numeroCpu = Math.floor(Math.random() * 5) + 1;
-  console.log(numeroCpu);
-  const somma = scelta + numeroCpu;
-  console.log(somma);
-  if (somma % 2 === 0) {
-  }
+/*
+if (scelta == "pari") {
+  const pari = "pari";
+} else if (scelta == "dispari") {
+  const dispari = "dispari";
 } else {
+  console.log("errore");
+}
+*/
+const scelta = prompt("Scegli: pari o dispari?");
+console.log(scelta);
+
+const sceltaNumero = parseInt(prompt("Inserisci un numero da 1 a 5"));
+console.log(sceltaNumero);
+const numeroCpu = Math.floor(Math.random() * 5) + 1;
+console.log(numeroCpu);
+const somma = sceltaNumero + numeroCpu;
+console.log(somma);
+
+let pariDispari;
+
+if (somma % 2 === 0) {
+  pariDispari = "pari";
+} else {
+  pariDispari = "dispari";
+}
+console.log(pariDispari);
+
+if (scelta === pariDispari) {
+  console.log("Hai vinto");
+} else {
+  console.log("Hai perso");
 }
