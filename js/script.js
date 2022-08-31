@@ -38,16 +38,7 @@ const sceltaNumero = parseInt(prompt("Inserisci un numero da 1 a 5"));
 console.log(sceltaNumero);
 const numeroCpu = getRandomNumber(1, 5);
 console.log(numeroCpu);
-const somma = sceltaNumero + numeroCpu;
-console.log(somma);
-
-let pariDispari;
-
-if (somma % 2 === 0) {
-  pariDispari = "pari";
-} else {
-  pariDispari = "dispari";
-}
+const pariDispari = isSumOddOrEven(sceltaNumero, numeroCpu);
 console.log(pariDispari);
 
 if (scelta === pariDispari) {
@@ -56,9 +47,21 @@ if (scelta === pariDispari) {
   console.log("Hai perso");
 }
 
+//////// funzione numero random
 function getRandomNumber(min, max) {
   let range = max - min;
   let random = Math.floor(Math.random() * range);
   let result = min + random;
   return result;
+}
+
+/////// funzione somma pari/dispari
+function isSumOddOrEven(number1, number2) {
+  let sum = number1 + number2;
+  //   console.log(sum);
+  if (sum % 2 === 0) {
+    return "pari";
+  } else {
+    return "dispari";
+  }
 }
