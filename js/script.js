@@ -36,7 +36,7 @@ console.log(scelta);
 
 const sceltaNumero = parseInt(prompt("Inserisci un numero da 1 a 5"));
 console.log(sceltaNumero);
-const numeroCpu = Math.floor(Math.random() * 5) + 1;
+const numeroCpu = getRandomNumber(1, 5);
 console.log(numeroCpu);
 const somma = sceltaNumero + numeroCpu;
 console.log(somma);
@@ -54,4 +54,11 @@ if (scelta === pariDispari) {
   console.log("Hai vinto");
 } else {
   console.log("Hai perso");
+}
+
+function getRandomNumber(min, max) {
+  let range = max - min;
+  let random = Math.floor(Math.random() * range);
+  let result = min + random;
+  return result;
 }
