@@ -2,7 +2,6 @@ console.log("Mercoledì");
 
 ////////////////////// PALINDROMA
 
-/*
 const word = prompt("Inserisci la prima parola che ti viene in mente");
 console.log(word);
 
@@ -19,18 +18,9 @@ function reverseWord(word) {
   const parolaAlContrario = word.split("").reverse().join("");
   return parolaAlContrario;
 }
-*/
+
 /////////////////// PARI E DISPARI
 
-/*
-if (scelta == "pari") {
-  const pari = "pari";
-} else if (scelta == "dispari") {
-  const dispari = "dispari";
-} else {
-  console.log("errore");
-}
-*/
 const scelta = prompt("Scegli: pari o dispari?");
 console.log(scelta);
 
@@ -58,7 +48,7 @@ function getRandomNumber(min, max) {
 /////// funzione somma pari/dispari
 function isSumOddOrEven(number1, number2) {
   let sum = number1 + number2;
-  //   console.log(sum);
+  console.log(sum);
   if (sum % 2 === 0) {
     return "pari";
   } else {
