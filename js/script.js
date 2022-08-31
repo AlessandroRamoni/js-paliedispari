@@ -21,6 +21,10 @@ function reverseWord(word) {
 
 /////////////////// PARI E DISPARI
 
+const container = document.querySelector(".container");
+const titolo = document.createElement("h1");
+container.append(titolo);
+
 const scelta = prompt("Scegli: pari o dispari?");
 console.log(scelta);
 
@@ -32,9 +36,9 @@ const pariDispari = isSumOddOrEven(sceltaNumero, numeroCpu);
 console.log(pariDispari);
 
 if (scelta === pariDispari) {
-  console.log("Hai vinto");
+  titolo.append("Hai vinto");
 } else {
-  console.log("Hai perso");
+  titolo.append("Hai perso");
 }
 
 //////// funzione numero random
