@@ -14,8 +14,8 @@ if (parolaInvertita === word) {
   console.log("La parola non è palindroma");
 }
 
-function reverseWord(word) {
-  const parolaAlContrario = word.split("").reverse().join("");
+function reverseWord(text) {
+  const parolaAlContrario = text.split("").reverse().join("");
   return parolaAlContrario;
 }
 
@@ -45,19 +45,23 @@ if (scelta === pariDispari) {
 
 //////// funzione numero random
 function getRandomNumber(min, max) {
-  let range = max - min;
-  let random = Math.floor(Math.random() * range);
-  let result = min + random;
-  return result;
+  let range = max - min + 1;
+  let random = Math.floor(Math.random() * range) + min;
+  return random;
 }
 
 /////// funzione somma pari/dispari
 function isSumOddOrEven(number1, number2) {
   let sum = number1 + number2;
   console.log(sum);
+
+  return sum % 2 === 0 ? "pari" : "dispari";
+
+  /*
   if (sum % 2 === 0) {
     return "pari";
   } else {
     return "dispari";
   }
+  */
 }
